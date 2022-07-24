@@ -11,6 +11,12 @@ namespace PowerUps
         public override void BounceBall()
         {
             base.BounceBall();
+            MakeBallSmaller();
+        }
+
+        private void MakeBallSmaller()
+        {
+            
         }
     }
 }
