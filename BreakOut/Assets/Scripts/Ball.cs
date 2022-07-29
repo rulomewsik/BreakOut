@@ -76,6 +76,19 @@ public class Ball : MonoBehaviour
             }
         }
     }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("SmallBallBrick"))
+        {
+            MakeSmallBall();
+        }
+    }
+
+    private void MakeSmallBall()
+    {
+        transform.localScale = new Vector3(0.6F, 0.6F, 0.6F);
+    }
 
     private void FixedUpdate()
     {

@@ -130,3 +130,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerLimitX: 24
   playerSpeed: 5
+  settings: {fileID: 11400000, guid: 62940691a2c93428091ac8c1f8cce32a, type: 2}

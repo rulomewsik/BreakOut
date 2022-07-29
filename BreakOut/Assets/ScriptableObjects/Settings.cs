@@ -6,7 +6,7 @@ namespace ScriptableObjects
     public class Settings : ScriptableObject
     {
         public float ballSpeed = 30F;
-        public Difficulty difficultyLevel = Difficulty.Medium;
+        public Difficulty difficultyLevel = Difficulty.Easy;
         
         public enum Difficulty
         {

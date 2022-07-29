@@ -17,6 +17,17 @@ public class LivesAdministrator : MonoBehaviour
         }
     }
 
+    public void AddLife()
+    {
+        Transform parentTransform;
+        var originalGo = (parentTransform = transform).GetChild(parentTransform.childCount - 1);
+        var position = originalGo.position;
+        var rectTransform = (RectTransform)originalGo.transform;
+        
+        var newLifeGo = Instantiate(originalGo, new Vector3(position.x + rectTransform.rect.width + 4, position.y), Quaternion.identity, parentTransform);
+        lives.Add(newLifeGo.gameObject);
+    }
+    
     public void LoseLife()
     {
         var objectToDelete = lives[^1];

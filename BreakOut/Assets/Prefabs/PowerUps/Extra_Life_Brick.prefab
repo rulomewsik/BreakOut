@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6045406891412855773}
   - component: {fileID: 6045406891412855772}
   - component: {fileID: 6045406891412855760}
-  - component: {fileID: -607915257640311810}
+  - component: {fileID: 8184599397979239493}
   m_Layer: 0
   m_Name: Extra_Life_Brick
   m_TagString: Untagged
@@ -115,7 +115,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &-607915257640311810
+--- !u!114 &8184599397979239493
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -124,7 +124,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 6045406891412855771}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aea39f5b496994483b8ac2340b84bc8f, type: 3}
+  m_Script: {fileID: 11500000, guid: df78fb3d8db5c4ce9b6c911d328bd93f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   resistance: 1
+  pointsValue: 100
+  settings: {fileID: 11400000, guid: 62940691a2c93428091ac8c1f8cce32a, type: 2}
+  highScoreSo: {fileID: 11400000, guid: 5acf084cb214e4c989f1c6b1a038e423, type: 2}
+  brickDestroyed:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: LivesAdministrator, Assembly-CSharp
+        m_MethodName: AddLife
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
