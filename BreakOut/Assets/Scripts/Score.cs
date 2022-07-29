@@ -23,11 +23,6 @@ public class Score : MonoBehaviour
         highScoreSo.score = 0;
     }
 
-    private void FixedUpdate()
-    {
-        highScoreSo.score += 50;
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -38,5 +33,10 @@ public class Score : MonoBehaviour
             highScoreText.text = $"High Score: {highScoreSo.highScore}";
             highScoreSo.Save();
         }
+    }
+
+    public void IncrementScore(int points)
+    {
+        highScoreSo.score += points;
     }
 }

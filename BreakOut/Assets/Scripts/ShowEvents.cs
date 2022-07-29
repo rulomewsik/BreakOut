@@ -25,11 +25,9 @@ public class ShowEvents : MonoBehaviour
 
     private void OnSpacePressed(object sender, EventArgs e)
     {
-        Debug.Log("Evento Presionado jiji");
     }
 
     public void onUnityEventFired()
     {
-        Debug.Log("Evento Unity Disparado yey");
     }
 }

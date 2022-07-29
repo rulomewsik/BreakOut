@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace PowerUps
 {
     public class ExtraLifeBrick : Brick
@@ -8,9 +10,9 @@ namespace PowerUps
         
         }
 
-        public override void BounceBall()
+        protected override void BounceBall(Collision collision)
         {
-            base.BounceBall();
+            base.BounceBall(collision);
             GiveExtraLife();
         }
 

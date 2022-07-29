@@ -8,8 +8,8 @@ public class WoodBrick : Brick
         resistance = 3;
     }
 
-    public override void BounceBall()
+    protected override void BounceBall(Collision collision)
     {
-        base.BounceBall();
+        base.BounceBall(collision);
     }
 }
