@@ -1,3 +1,5 @@
+using System;
+using ScriptableObjects;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -10,6 +12,23 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //transform.localScale = new Vector3(1F, GetPaddleSizeFromDifficulty(settings.difficultyLevel), 2F);
+    }
+
+    private float GetPaddleSizeFromDifficulty(Settings.Difficulty difficultyLevel)
+    {
+        return difficultyLevel switch
+        {
+            Settings.Difficulty.Easy => 6.0F,
+            Settings.Difficulty.Medium => 4.0F,
+            Settings.Difficulty.Hard => 2.0F,
+            _ => 4.0F
+        };
+    }
+
+    private void LateUpdate()
+    {
+        //transform.localScale = new Vector3(1F, GetPaddleSizeFromDifficulty(settings.difficultyLevel), 2F);
     }
 
     // Update is called once per frame
@@ -45,5 +64,20 @@ public class Player : MonoBehaviour
         }
 
         playerTransform.position = playerPosition;
+    }
+    
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Ball"))
+        {
+            BounceBall(collision);
+        }
+    }
+
+    private void BounceBall(Collision collision)
+    {
+        var direction = collision.contacts[0].point - transform.position;
+        direction = direction.normalized;
+        collision.rigidbody.velocity = collision.gameObject.GetComponent<Ball>().ballSpeed * direction;
     }
 }

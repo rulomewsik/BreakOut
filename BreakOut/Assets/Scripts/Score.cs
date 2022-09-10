@@ -19,13 +19,9 @@ public class Score : MonoBehaviour
         actualScoreText = actualScoreTransform.GetComponent<TMP_Text>();
 
         highScoreSo.Load();
-        highScoreText.text = $"High Score: {highScoreSo.highScore}";
         highScoreSo.score = 0;
-    }
-
-    private void FixedUpdate()
-    {
-        highScoreSo.score += 50;
+        highScoreText.text = $"High Score: {highScoreSo.highScore}";
+        actualScoreText.text = $"Actual Score: {highScoreSo.score}";
     }
 
     // Update is called once per frame
@@ -38,5 +34,10 @@ public class Score : MonoBehaviour
             highScoreText.text = $"High Score: {highScoreSo.highScore}";
             highScoreSo.Save();
         }
+    }
+
+    public void IncrementScore(int points)
+    {
+        highScoreSo.score += points;
     }
 }

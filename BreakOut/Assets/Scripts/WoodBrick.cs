@@ -1,15 +1,10 @@
-using UnityEngine;
-
 public class WoodBrick : Brick
 {
     // Start is called before the first frame update
     void Start()
     {
-        resistance = 3;
-    }
-
-    public override void BounceBall()
-    {
-        base.BounceBall();
+        resistance = 2;
+        pointsValue = 150;
+        resistance = GetBrickResistanceFromDifficulty(resistance, settings.difficultyLevel);
     }
 }

@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1488992720535441695}
   - component: {fileID: 1488992720535441694}
   - component: {fileID: 8636483851947519253}
+  - component: {fileID: -1125957501029720322}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Ball
@@ -127,5 +128,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e13779d8f07c74bc48b1b0f01bd0a6fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  settings: {fileID: 11400000, guid: 62940691a2c93428091ac8c1f8cce32a, type: 2}
   isGameStarted: 0
   ballSpeed: 20
+  ballDestroyed:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-1125957501029720322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488992720535441693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d53b36bcf52c04b308816d024a482464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radio: 1
+  keepOnScreen: 0
+  isOnScreen: 1
+  cameraWidth: 0
+  cameraHeight: 0
+  wentRight: 0
+  wentLeft: 0
+  wentUp: 0
+  wentDown: 0
